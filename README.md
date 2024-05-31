@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+Key components of the code.
+1. Imports:
+    We import necessary modules and components from external libraries. In this case, we're using React, axios for making HTTP requests, react-loader-spinner for displaying a loading spinner, and Font Awesome icons 
+    for displaying a frown icon in case of an error.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. Functional Component: WeatherApp:
+   This is a functional component named WeatherApp, which is the main component of our application.
 
-## Available Scripts
+3. State Management with useState:
+   We use the useState hook to manage state within our component. Three state variables are initialized:
+     > `input`: to store the value of the city input field.
+     > `weather`: an object containing loading, data, and error properties to manage the weather data fetching process.
 
-In the project directory, you can run:
+4. toDateFunction:
+   This function generates the current date in a specific format using JavaScript's Date object.
 
-### `npm start`
+5. search Function:
+   > This function is triggered when the user presses the Enter key while typing in the city search input field.
+   > It sets the loading state to true, resets the input field, and then makes an asynchronous GET request to the OpenWeatherMap API using axios.
+   > Upon receiving a response, it updates the weather state with the retrieved data and sets loading to false.
+   > If an error occurs during the request, it sets the error state to true.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+6. Rendering JSX:
+   > The return statement contains JSX code to render the UI.
+   > It includes an input field for users to enter the city name, which triggers the search function.
+   > It conditionally renders loading spinner, error message, and weather data based on the state.
+   > If weather data is available, it displays the city name, date, weather icon, temperature, weather description, and wind speed.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7. Export Default:
+   > The WeatherApp component is exported as the default export, making it available for use in other parts of the application.
